@@ -1,7 +1,9 @@
+package miPrincipal;
+
 import Persona.Persona;
 import java.util.*;
 
-public class DemoArrayListPersonas {
+public class DemoArrayListPersonas{
 
     public static void menu() {
 

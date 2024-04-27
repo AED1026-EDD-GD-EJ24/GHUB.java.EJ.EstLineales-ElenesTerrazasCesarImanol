@@ -1,5 +1,7 @@
 package ListaDoble;
 
+import miPrincipal.PosicionIlegalException;
+
 public class ListaDoblementeEnlazada<T> {
    
     private Nodo<T> cabeza;

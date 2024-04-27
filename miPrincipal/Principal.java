@@ -61,7 +61,7 @@ public class Principal {
                DemoArrayListLinkedList.menu();
                break;
             case 11:
-               DemoArrayListPersonas.menu();
+                DemoArrayListPersonas.menu();
                break;
             case 12:
                DemoLinkedListCuadrupedos.menu();

@@ -1,5 +1,5 @@
 package ListaDoble;
-
+import miPrincipal.PosicionIlegalException;
 public class ListaDobleCircular<T> {
 
     // Atributos

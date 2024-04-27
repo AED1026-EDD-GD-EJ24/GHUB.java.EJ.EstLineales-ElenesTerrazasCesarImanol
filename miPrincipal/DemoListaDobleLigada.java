@@ -1,5 +1,5 @@
 package miPrincipal;
-import ListaDoble.ListaDobleCircular;
+import ListaDoble.ListaDoblementeEnlazada;
 
 public class DemoListaDobleLigada {
     public static void menu() throws PosicionIlegalException {
