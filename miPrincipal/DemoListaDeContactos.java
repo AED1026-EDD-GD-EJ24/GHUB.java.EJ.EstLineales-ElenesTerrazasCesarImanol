@@ -8,7 +8,6 @@ public class DemoListaDeContactos {
         System.out.println("************************");
         System.err.println();
         ListaDeContactos ldc = new ListaDeContactos();
-        // agregamos algunos contactos
         ldc.agregarContactos("Fernando", "Castro",
                 "C11 No 12 Culiacan", "fernandocastro@gmail.com",
                 "6677160732", "6677511511");

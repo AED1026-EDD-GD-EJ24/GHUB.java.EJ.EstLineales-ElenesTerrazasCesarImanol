@@ -11,7 +11,6 @@ public class DemoArrayListLinkedList {
         System.out.println();
         try {
 
-            // Declaramos e instanciones
             List<Integer> lista = new LinkedList<Integer>();
             List<Integer> lista2 = new ArrayList<Integer>();
 
@@ -33,7 +32,6 @@ public class DemoArrayListLinkedList {
             System.out.println("Dato en la posicion 3:" + lista.get(3));
             System.out.println("Dato en la posicion 4:" + lista.get(4));
 
-            // lista.add(6,1); //Opción inválida
 
             lista.remove(0);
             lista.remove(3);
@@ -42,12 +40,10 @@ public class DemoArrayListLinkedList {
             System.out.println("Dato en la posicion 1:" + lista.get(1));
             System.out.println("Dato en la posicion 2:" + lista.get(2));
 
-            // Itera lista para imprimir cada uno de sus elementos
             for (Integer aux : lista) {
                 System.err.println("Elemento: " + aux);
             }
 
-            // Utilizar ArrayLista
             lista2.add(10);
             lista2.add(15);
             lista2.add(24);
@@ -62,7 +58,6 @@ public class DemoArrayListLinkedList {
             System.out.println("Dato en la posicion 3:" + lista2.get(3));
             System.out.println("Dato en la posicion 4:" + lista2.get(4));
 
-            // Recorrer la coleccion utilizando iteradores
             for (Integer aux : lista2) {
                 System.out.println("Elemento: " + aux);
             }

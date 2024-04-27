@@ -1,24 +1,18 @@
 package miPrincipal;
 
 public class Lista<T> {
-    // Atributos
-    // primer nodo de la lista
     private Nodo<T> cabeza;
-    // total de elementos en la lista
     private int tamanio;
 
-    // Constructor por defecto
     public Lista() {
         cabeza = null;
         tamanio = 0;
     }
 
-    // Devuelve el tamaño de la lista
     public int getTamanio() {
         return tamanio;
     }
 
-    // Consulta si la lista esta vacia
     public boolean esVacia() {
         if (cabeza == null)
             return true;
@@ -26,7 +20,6 @@ public class Lista<T> {
             return false;
     }
 
-    // Agrega un nuevo nodo al final de la lista
     public void agregar(T valor) {
         Nodo<T> nuevo = new Nodo<T>();
         nuevo.setValor(valor);
@@ -48,12 +41,10 @@ public class Lista<T> {
         if (pos >= 0 && pos <= tamanio) {
             Nodo<T> nuevo = new Nodo<T>();
             nuevo.setValor(valor);
-            // el nuevo nodo se inserta al inicio de la lista
             if (pos == 0) {
                 nuevo.setSiguiente(cabeza);
                 cabeza = nuevo;
             } else {
-                // el nuevo nodo se inserta al final de la lista
                 if (pos == tamanio) {
                     Nodo<T> aux = cabeza;
                     while (aux.getSiguiente() != null) {
@@ -61,7 +52,6 @@ public class Lista<T> {
                     }
                     aux.setSiguiente(nuevo);
                 } else {
-                    // el nuevo nodo se inserta en cualquier posicion de la lista
                     Nodo<T> aux = cabeza;
                     for (int i = 0; i <= pos - 2; i++) {
                         aux = aux.getSiguiente();
@@ -80,7 +70,6 @@ public class Lista<T> {
 
     }
 
-    // Devueve el valor de una determinada posicion
     public T getValor(int pos) throws PosicionIlegalException {
         if (pos >= 0 && pos < tamanio) {
             T valor;
@@ -105,11 +94,9 @@ public class Lista<T> {
     public void remover(int pos) throws PosicionIlegalException {
         if (pos >= 0 && pos < tamanio) {
             if (pos == 0) {
-                // el nodo a eliminar esta en la primera posicion
                 cabeza = cabeza.getSiguiente();
                 tamanio--;
             }
-            // se elimina en medio y al final
             else {
                 Nodo<T> aux = cabeza;
                 for (int i = 0; i <= pos - 2; i++) {
@@ -125,7 +112,6 @@ public class Lista<T> {
         }
     }
 
-    // elimina toda la lista
     public void limpiar() {
         cabeza = null;
         tamanio = 0;

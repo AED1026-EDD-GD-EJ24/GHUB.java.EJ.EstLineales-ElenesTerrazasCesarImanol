@@ -9,9 +9,7 @@ public class DemoStack {
         System.out.println("          STACK         ");
         System.out.println("************************");
         System.out.println();
-        // crear mi pila con elementos tipo Entero
         Stack<Integer> pila = new Stack<Integer>();
-        // Apilar elementos
         pila.push(2);
         pila.push(5);
         pila.push(7);

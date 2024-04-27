@@ -27,14 +27,12 @@ public class ListaDoblementeEnlazada<T> {
             return false;
     }
 
-    // Agrega un nuevo nodo al final de la lista
     public void agregar(T valor) {
         Nodo<T> nuevo = new Nodo<T>();
         nuevo.setValor(valor);
         if (esVacia()) {
             cabeza = nuevo;
         } else {
-            // agregar al final de la lista
             Nodo<T> aux = cabeza;
             while (aux.getSiguiente() != null) {
                 aux = aux.getSiguiente();
@@ -50,12 +48,10 @@ public class ListaDoblementeEnlazada<T> {
         if (pos >= 0 && pos <= tamanio) {
             Nodo<T> nuevo = new Nodo<T>();
             nuevo.setValor(valor);
-            // el nuevo nodo se inserta al inicio de la lista
             if (pos == 0) {
                 nuevo.setSiguiente(cabeza);
                 cabeza = nuevo;
             } else {
-                // el nuevo nodo se inserta al final de la lista
                 if (pos == tamanio) {
                     Nodo<T> aux = cabeza;
                     while (aux.getSiguiente() != null) {
@@ -63,7 +59,6 @@ public class ListaDoblementeEnlazada<T> {
                     }
                     aux.setSiguiente(nuevo);
                 } else {
-                    // el nuevo nodo se inserta en cualquier posicion de la lista
                     Nodo<T> aux = cabeza;
                     for (int i = 0; i <= pos - 2; i++) {
                         aux = aux.getSiguiente();
@@ -85,7 +80,6 @@ public class ListaDoblementeEnlazada<T> {
 
     }
 
-    // Devueve el valor de una determinada posicion
     public T getValor(int pos) throws PosicionIlegalException {
         if (pos >= 0 && pos < tamanio) {
             T valor;
@@ -110,12 +104,10 @@ public class ListaDoblementeEnlazada<T> {
     public void remover(int pos) throws PosicionIlegalException {
         if (pos >= 0 && pos < tamanio) {
             if (pos == 0) {
-                // el nodo a eliminar esta en la primera posicion
                 cabeza = cabeza.getSiguiente();
                 cabeza.setAnterior(null);
                 tamanio--;
             }
-            // se elimina en medio y al final
             else {
                 Nodo<T> aux = cabeza;
                 for (int i = 0; i <= pos - 2; i++) {
@@ -133,7 +125,6 @@ public class ListaDoblementeEnlazada<T> {
         }
     }
 
-    // elimina toda la lista
     public void limpiar() {
         cabeza = null;
         tamanio = 0;
